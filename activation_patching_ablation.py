@@ -26,10 +26,9 @@ for p in [EVALS_PATH, SRC_PATH, EVALUATION_CODE_PATH]:
     if p not in sys.path:
         sys.path.insert(0, p)
 
-# Add parent directory to path to import modules
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# Import evaluation modules
+
 from evals.intuitive_physics.eval import init_model, extract_losses, compute_metrics
 from evals.intuitive_physics.data_manager import init_data
 from evals.intuitive_physics.utils import get_dataset_paths, get_time_masks
@@ -56,10 +55,10 @@ def load_model_from_config(config_path, device=None):
     pretrain_cfg = config['pretrain']
     data_cfg = config['data']
     
-    # Update paths to be absolute if needed
+    
     pretrained_path = os.path.join(pretrain_cfg['folder'], pretrain_cfg['checkpoint'])
 
-    # Initialize model
+    
     encoder, target_encoder, predictor = init_model(
         device=device,
         pretrained=pretrained_path,
@@ -185,7 +184,7 @@ class AblationPatcher:
             out = preds[0]
             targets = masked_targets[0]
             
-            # Step 5: Compute L1 loss
+            
             loss = F.l1_loss(out, targets, reduction="mean")
             
         return loss.item()

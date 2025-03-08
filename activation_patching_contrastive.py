@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+
 
 import os
 import sys
@@ -26,7 +25,6 @@ for p in [EVALS_PATH, SRC_PATH, EVALUATION_CODE_PATH]:
     if p not in sys.path:
         sys.path.insert(0, p)
 
-# Add parent directory to path to import modules
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import evaluation modules
