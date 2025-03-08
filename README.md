@@ -1,4 +1,4 @@
-# Intuitive Physics Understanding with JEPA Models
+# Circuits for Intuitive Physics Understanding in Vision models (Under Construction)
 
 This repository contains code and data for investigating how JEPA (Joint Embedding Predictive Architecture) models represent intuitive physics concepts. It builds upon the work in the paper *Intuitive physics understanding emerges from self-supervised pretraining on natural videos* by Quentin Garrido et al.
 
